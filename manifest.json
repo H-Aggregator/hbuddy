@@ -1,0 +1,94 @@
+{
+	//required
+	"manifest_version": 2, //int
+	"name": "hbuddy", //45 char max
+	//"short_name": "ExtName", //max 12 chars
+	"version": "0.0.1", //between 0 and 65535
+	//"version_name": "0.0 alpha",
+	
+	//recommended
+	//"default_locale": "en", //requires /_locales/
+	//"description": "Description...", //max 132 chars
+	//"icons": { "16": "icon16.png",
+				//"32": "icon32", //for windows
+				//"48": "icon48",
+				//"128":, ""icon128"},
+	
+	//pick one (or none)
+	//"browser_action": {
+		//-OR-
+	//"page_action": {
+		//"default_icon": {"19": "icon19",
+							//"38": "icon38"},
+		//"default_title": "tooltip",
+		//"default_popup": "popup.html"
+	//},
+	
+	"permissions": ["bookmarks", "*://*.dlsite.com/*", "*://*.exhentai.org/*", "*://*.exhentai.net/*", "*://*.e-hentai.org/*", "*://*.ehgt.org/*"],
+	
+	"content_scripts": [
+	{
+		"all_frames": true, //allows running in iframes
+		"js": ["test3.js", "test4.js"],
+		"matches": ["*://*.dlsite.com/maniax/work/*"],
+		"run_at": "document_end"
+	}],
+	
+	//optional
+	//"author": "", //deprecated in v2?
+
+	"background":{
+		"scripts": ["test2.js"],
+		//"page": "background.html",
+		"persistent": false
+	}//,
+	//"background_page": "background.html",
+	//"chrome_settings_overrides": {},
+	//"chrome_ui_overrides" : {}, //dev rel only
+	//"chrome_url_overrides": {},
+	//"commands": {},
+	//"content_pack":{},
+	
+	//"content_security_policy": "policyString",
+	//"converted_from_user_script": {},
+	//"current_locale": "",
+	//"devtools_page": "devtools.html",
+	//"externally_connectable": {
+		//"matches": ["*://*.example.com/*"]
+	//},
+	//"file_browser_handlers": [],
+	//"homepage_url": "http://path/to/homepage",
+	//"import": "",
+	//"incognito": "spanning or split",
+	//"input_components": "",
+	//"key": "publicKey",
+	//"minimum_chrome_version": "versionString",
+
+	//"oauth2": "",
+	//"offline_enabled": true,
+	//"omnibox": {
+		//"keyword": "aString"
+	//},
+	//"optional_permissions": ["tabs"],
+	//"options_page": "options.html",
+	//"options_ui": {
+		//"chrome_style": true,
+		//"page": "options.html"
+	//},
+	
+
+
+
+
+
+
+
+	//"storage": {
+		//"managed_schema": "schema.json"
+	//},
+
+
+	//"update_url": "http://path/to/updateInfo.xml",
+	//"web_accessible_resources": []
+	
+}
